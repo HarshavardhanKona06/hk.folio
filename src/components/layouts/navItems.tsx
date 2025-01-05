@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,7 +9,7 @@ import {
     faComment,
     faTerminal,
     faUser
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 interface NavItem {
     icon: React.ReactNode;
@@ -70,12 +71,12 @@ const MobileNav: React.FC = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-end">
+        <div className='relative flex flex-col items-end'>
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="
+                className='
                     flex items-center justify-center
-                    w-24 h-10
+                    w-16 h-10
                     rounded-full
                     backdrop-blur-md
                     bg-bg-tertiary-dark/40
@@ -84,7 +85,7 @@ const MobileNav: React.FC = () => {
                     hover:text-teal-hover-dark
                     hover:border-teal-hover-dark
                     transition-all duration-300
-                "
+                '
             >
                 <FontAwesomeIcon
                     icon={faChevronDown}
@@ -96,34 +97,34 @@ const MobileNav: React.FC = () => {
             </button>
 
             {isExpanded && (
-                <div className="
+                <div className='
                     absolute top-12
                     flex flex-col items-center gap-3
                     px-3 py-3
                     backdrop-blur-md
                     bg-bg-tertiary-dark/40
                     border border-border-dark/30
-                    rounded-xl
+                    rounded-full
                     transition-all duration-300 ease-in-out
-                    w-24
-                ">
+                    w-16
+                '>
                     {navItems.map((item) => (
                         <button
                             key={item.sectionId}
                             onClick={() => handleNavClick(item.sectionId)}
                             className={`
                                 w-full p-2
-                                rounded-lg
+                                rounded-full
                                 transition-colors duration-200
                                 flex items-center justify-center
                                 ${activeSection === item.sectionId ?
-                                'bg-teal-hover-dark/10 text-teal-hover-dark' :
-                                'text-text-tertiary-dark hover:bg-text-tertiary-dark/10'
+                                'bg-teal-hover-dark text-bg-primary-dark' :
+                                'text-text-tertiary-dark hover:bg-teal-hover-dark hover:text-bg-primary-dark'
                             }
                             `}
                         >
                             {item.icon}
-                            <span className="sr-only">{item.label}</span>
+                            <span className='sr-only'>{item.label}</span>
                         </button>
                     ))}
                 </div>
@@ -207,16 +208,15 @@ const DesktopNav: React.FC = () => {
     const showItems = isExpanded || isHovered;
 
     return (
-        <div className="relative flex items-center justify-end">
+        <div className='relative flex items-center justify-end'>
             <div
-                className="flex items-center"
+                className='flex items-center'
                 onMouseEnter={() => !isExpanded && setIsHovered(true)}
                 onMouseLeave={() => !isExpanded && setIsHovered(false)}
             >
                 <div className={`
-                    flex items-center gap-4 md:gap-5 lg:gap-6 
-                    px-3 md:px-3 lg:px-4 
-                    py-2 md:py-2.5 lg:py-3
+                    flex items-center gap-3
+                    px-2.5 py-1.5
                     backdrop-blur-md
                     bg-bg-tertiary-dark/40
                     border border-border-dark/30
@@ -232,16 +232,16 @@ const DesktopNav: React.FC = () => {
                                 flex items-center gap-1.5 md:gap-2
                                 px-2.5 py-1.5
                                 text-sm md:text-sm lg:text-base
-                                rounded-full
+                                rounded-full border border-bg-primary-dark
                                 transition-colors duration-200
                                 ${activeSection === item.sectionId ?
-                                'bg-teal-hover-dark/10 text-teal-hover-dark' :
-                                'text-text-tertiary-dark hover:bg-text-tertiary-dark/10'
+                                'bg-teal-hover-dark text-bg-primary-dark' :
+                                'text-text-tertiary-dark hover:bg-teal-hover-dark hover:text-bg-primary-dark'
                             }
                             `}
                         >
                             {item.icon}
-                            <span className="whitespace-nowrap">{item.label}</span>
+                            <span className='whitespace-nowrap'>{item.label}</span>
                         </button>
                     ))}
                 </div>
@@ -254,27 +254,29 @@ const DesktopNav: React.FC = () => {
                         }
                     }}
                     className={`
-                        flex items-center justify-center
-                        w-14 md:w-16 lg:w-[4.5rem]
-                        h-9 md:h-10 lg:h-12
-                        ml-1.5 md:ml-2
-                        rounded-full
-                        backdrop-blur-md
-                        bg-bg-tertiary-dark/40
-                        border border-border-dark/30
-                        text-text-tertiary-dark 
-                        hover:text-teal-hover-dark 
-                        hover:border-teal-hover-dark
-                        transition-all duration-300
-                    `}
+        flex items-center justify-center
+        w-14 md:w-16 lg:w-[4.5rem]
+        h-9 md:h-10 lg:h-12
+        ml-1.5 md:ml-2
+        rounded-full
+        backdrop-blur-md
+        bg-bg-tertiary-dark/40
+        border border-border-dark/30
+        text-text-tertiary-dark 
+        hover:text-teal-hover-dark 
+        hover:border-teal-hover-dark
+        transition-all duration-300
+    `}
                 >
                     <FontAwesomeIcon
                         icon={faChevronLeft}
+                        width='16'
+                        height='16'
                         className={`
-                            transform transition-transform duration-300
-                            text-sm md:text-base lg:text-lg
-                            ${showItems ? 'rotate-180' : ''}
-                        `}
+            w-4 md:w-4 lg:w-5 h-4 md:h-4 lg:h-5
+            transform transition-transform duration-300
+            ${showItems ? 'rotate-180' : ''}
+        `}
                     />
                 </button>
             </div>
@@ -283,19 +285,23 @@ const DesktopNav: React.FC = () => {
 };
 
 export default function NavItems() {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768); // md breakpoint
+            setIsMobile(window.innerWidth < 768);
         };
         checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    if (isMobile === null) {
+        return null;
+    }
+
     return (
-        <div className="relative">
+        <div className='relative'>
             {isMobile ? <MobileNav /> : <DesktopNav />}
         </div>
     );

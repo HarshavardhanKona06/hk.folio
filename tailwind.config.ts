@@ -8,6 +8,23 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'bg-primary-dark': 'var(--bg-primary-dark)',
+        'bg-secondary-dark': 'var(--bg-secondary-dark)',
+        'bg-tertiary-dark': 'var(--bg-tertiary-dark)',
+
+        'text-primary-dark': 'var(--text-primary-dark)',
+        'text-secondary-dark': 'var(--text-secondary-dark)',
+        'text-tertiary-dark': 'var(--text-tertiary-dark)',
+
+        'border-dark': 'var(--border-dark)',
+
+        'teal-dark': 'var(--teal-dark)',
+        'teal-hover-dark': 'var(--teal-hover-dark)',
+
+        'saffron-dark': 'var(--saffron-dark)',
+        'saffron-hover-dark': 'var(--saffron-hover-dark)',
+      },
       fontFamily: {
         'firaCode': 'var(--font-fira-code)',
         'poppins': 'var(--font-poppins)',

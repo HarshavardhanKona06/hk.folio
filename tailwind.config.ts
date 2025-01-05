@@ -7,7 +7,15 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'firaCode': 'var(--font-fira-code)',
+        'poppins': 'var(--font-poppins)',
+        'firaSans': 'var(--font-fira-sans)',
+        'caveat': 'var(--font-caveat)',
+        'crimsonPro': 'var(--font-crimsonPro)',
+      }
+    },
   },
   plugins: [],
 } satisfies Config;

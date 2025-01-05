@@ -26,9 +26,9 @@ export default {
         'saffron-hover-dark': 'var(--saffron-hover-dark)',
       },
       fontFamily: {
-        'firaCode': 'var(--font-fira-code)',
+        'firaCode': 'var(--font-firaCode)',
         'poppins': 'var(--font-poppins)',
-        'firaSans': 'var(--font-fira-sans)',
+        'firaSans': 'var(--font-firaSans)',
         'caveat': 'var(--font-caveat)',
         'crimsonPro': 'var(--font-crimsonPro)',
       }

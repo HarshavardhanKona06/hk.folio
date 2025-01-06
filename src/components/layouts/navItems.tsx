@@ -19,7 +19,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     { icon: <FontAwesomeIcon icon={faUser} />, label: 'About', sectionId: 'about' },
-    { icon: <FontAwesomeIcon icon={faBriefcase} />, label: 'Experience', sectionId: 'experience' },
+    { icon: <FontAwesomeIcon icon={faBriefcase} />, label: 'Experience', sectionId: 'under-construction' },
     { icon: <FontAwesomeIcon icon={faTerminal} />, label: 'Projects', sectionId: 'projects' },
     { icon: <FontAwesomeIcon icon={faComment} />, label: 'Contact', sectionId: 'contact' },
 ];

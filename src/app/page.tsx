@@ -1,13 +1,11 @@
 import LandingSection from "@/components/sections/landingSection";
+import AboutMeSection from "@/components/sections/aboutMeSection";
 
 export default function Home() {
   return (
       <main>
           <LandingSection />
-
-          <section className='h-screen w-screen'>
-
-          </section>
+          <AboutMeSection />
       </main>
   );
 }

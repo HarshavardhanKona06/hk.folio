@@ -3,7 +3,6 @@ import React from "react";
 import "../styles/globals.css";
 import { poppins, caveat, crimsonPro, firaCode, firaSans } from "@/lib/fonts";
 import NavBar from "@/components/sections/navBar";
-import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = {
   title: "Harshavardhan Kona",
@@ -22,7 +21,6 @@ export default function RootLayout({
       <body className="bg-bg-primary-dark text-text-primary-dark">
         <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   );

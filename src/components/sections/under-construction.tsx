@@ -1,6 +1,7 @@
 'use client';
+
 import React, { useEffect, useRef } from 'react';
-import lottie, { AnimationItem } from 'lottie-web';
+import type { AnimationItem } from 'lottie-web';
 import animationData from '@/lib/under-construction.json';
 
 interface UnderConstructionProps {
@@ -10,23 +11,35 @@ interface UnderConstructionProps {
 }
 
 const UnderConstruction: React.FC<UnderConstructionProps> = ({
-                                                                          width = '500px',
-                                                                          height = '500px',
-                                                                          className = ''
-                                                                      }) => {
+                                                                 width = '500px',
+                                                                 height = '500px',
+                                                                 className = ''
+                                                             }) => {
     const animationContainer = useRef<HTMLDivElement>(null);
     const animationInstance = useRef<AnimationItem | null>(null);
 
     useEffect(() => {
-        if (!animationContainer.current) return;
+        const loadLottie = async () => {
+            if (!animationContainer.current) return;
 
-        animationInstance.current = lottie.loadAnimation({
-            container: animationContainer.current,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            animationData: animationData,
-        });
+            try {
+                // Import lottie properly with correct type
+                const lottieModule = await import('lottie-web');
+                const lottie = lottieModule.default;
+
+                animationInstance.current = lottie.loadAnimation({
+                    container: animationContainer.current,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    animationData: animationData,
+                });
+            } catch (error) {
+                console.error('Error loading Lottie animation:', error);
+            }
+        };
+
+        loadLottie();
 
         return () => {
             if (animationInstance.current) {

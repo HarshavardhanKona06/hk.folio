@@ -1,3 +1,5 @@
+'use client';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-regular-svg-icons";
 import Image from "next/image";

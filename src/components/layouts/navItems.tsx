@@ -232,7 +232,7 @@ const DesktopNav: React.FC = () => {
                                 flex items-center gap-1.5 md:gap-2
                                 px-2.5 py-1.5
                                 text-sm md:text-sm lg:text-base
-                                rounded-full border border-bg-primary-dark
+                                rounded-full
                                 transition-colors duration-200
                                 ${activeSection === item.sectionId ?
                                 'bg-teal-hover-dark text-bg-primary-dark' :

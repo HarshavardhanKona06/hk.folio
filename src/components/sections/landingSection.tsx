@@ -78,9 +78,8 @@ export default function LandingSection() {
 
                             {/* Description */}
                             <p className='text-xl md:text-2xl text-text-secondary-dark font-light leading-relaxed max-w-3xl text-justify'>
-                                An enthusiastic creature who turns caffeine into code and occasionally gets cranky while
-                                building amazing applications.
-                                But hey, that&#39;s just part of the debugging adventure! 🚀
+                                A passionate builder who transforms ideas into scalable solutions and occasionally gets lost in
+                                optimization rabbit holes. But hey, that&#39;s just part of the engineering adventure! 🚀
                             </p>
                         </div>
 
@@ -88,7 +87,7 @@ export default function LandingSection() {
                         <div className='absolute right-0 flex flex-col items-center space-y-4'>
                             <div className='w-[3px] h-16 bg-border-dark mb-3'></div>
                             <a
-                                href='https://linkedin.com'
+                                href='https://linkedin.com/in/harshavardhankona'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-text-tertiary-dark hover:text-[#0B65C2] transform transition-all duration-300 hover:-translate-y-1'
@@ -96,7 +95,7 @@ export default function LandingSection() {
                                 <FontAwesomeIcon icon={faLinkedinIn} className='w-6 h-6'/>
                             </a>
                             <a
-                                href='https://github.com'
+                                href='https://github.com/kshvr16'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-text-tertiary-dark hover:text-[#FFFFFF] transform transition-all duration-300 hover:-translate-y-1'
@@ -104,7 +103,7 @@ export default function LandingSection() {
                                 <FontAwesomeIcon icon={faGithub} className='w-6 h-6'/>
                             </a>
                             <a
-                                href='https://twitter.com'
+                                href='https://discord.com'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-text-tertiary-dark hover:text-[#5865F2] transform transition-all duration-300 hover:-translate-y-1'

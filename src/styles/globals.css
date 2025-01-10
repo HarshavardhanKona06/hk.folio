@@ -21,3 +21,31 @@
     --saffron-hover-dark: #E9A35C;
 
 }
+
+@layer utilities {
+    .scrollbar-hide {
+        /* For Firefox */
+        scrollbar-width: none;
+        /* For IE/Edge */
+        -ms-overflow-style: none;
+    }
+
+    /* For Webkit browsers (Chrome, Safari, Opera, etc.) */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* If you want to apply it globally to the whole app */
+html, body {
+    /* For Firefox */
+    scrollbar-width: none;
+    /* For IE/Edge */
+    -ms-overflow-style: none;
+}
+
+/* For Webkit browsers */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}

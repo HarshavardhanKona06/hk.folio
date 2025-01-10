@@ -25,7 +25,7 @@ export default function LandingSection() {
     }, [roles.length]);
 
     return (
-        <section id='home' className='w-screen h-screen relative isolate overflow-hidden'>
+        <section id='home' className='w-full min-h-screen relative isolate overflow-hidden'>
             {/* Noise Filter Container */}
             <div className='absolute inset-0 overflow-hidden'>
                 <svg className='absolute inset-0 h-full w-full'>

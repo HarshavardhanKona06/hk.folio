@@ -53,7 +53,7 @@ const UnderConstruction: React.FC<UnderConstructionProps> = ({
                     w-[300px] h-[300px] 
                     sm:w-[400px] sm:h-[400px]
                     lg:w-[500px] lg:h-[500px]
-                    flex items-center justify-center 
+                    flex items-center justify-center mt-20 md:mt-4
                     ${className}
                 `}
             />

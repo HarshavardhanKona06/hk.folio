@@ -33,7 +33,7 @@ export const getYear = () => {
 
 const Footer: React.FC = () => {
     return (
-        <footer className='bg-bg-primary-dark p-6' aria-label='Site Footer'>
+        <footer className='bg-bg-primary-dark p-6 pb-8' aria-label='Site Footer'>
             <div className='max-w-[85rem] mx-auto'>
                 <div className='flex flex-col md:flex-row justify-between items-center text-text-tertiary-dark text-sm gap-4'>
                     <div className='font-firaSans flex flex-row flex-wrap items-center tracking-wider'>

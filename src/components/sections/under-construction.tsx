@@ -5,14 +5,10 @@ import type { AnimationItem } from 'lottie-web';
 import animationData from '@/lib/under-construction.json';
 
 interface UnderConstructionProps {
-    width?: string | number;
-    height?: string | number;
     className?: string;
 }
 
 const UnderConstruction: React.FC<UnderConstructionProps> = ({
-                                                                 width = '500px',
-                                                                 height = '500px',
                                                                  className = ''
                                                              }) => {
     const animationContainer = useRef<HTMLDivElement>(null);
@@ -23,7 +19,6 @@ const UnderConstruction: React.FC<UnderConstructionProps> = ({
             if (!animationContainer.current) return;
 
             try {
-                // Import lottie properly with correct type
                 const lottieModule = await import('lottie-web');
                 const lottie = lottieModule.default;
 
@@ -49,17 +44,23 @@ const UnderConstruction: React.FC<UnderConstructionProps> = ({
     }, []);
 
     return (
-        <section id={'under-construction'}
-                 className='min-h-screen pt-16 flex flex-col items-center justify-center gap-2 bg-bg-primary-dark'>
+        <section id='under-construction'
+                 className='min-h-screen pt-16 flex flex-col items-center justify-center gap-2 bg-bg-primary-dark'
+        >
             <div
                 ref={animationContainer}
-                style={{width, height}}
-                className={`flex items-center justify-center ${className}`}
+                className={`
+                    w-[300px] h-[300px] 
+                    sm:w-[400px] sm:h-[400px]
+                    lg:w-[500px] lg:h-[500px]
+                    flex items-center justify-center 
+                    ${className}
+                `}
             />
-            <h2 className='text-5xl font-crimsonPro tracking-wider font-bold text-text-secondary-dark'>
+            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-crimsonPro tracking-wider font-bold text-text-secondary-dark'>
                 Work In Progress
             </h2>
-            <p className='text-lg text-text-tertiary-dark font-firaSans text-center max-w-md tracking-wider'>
+            <p className='text-base sm:text-lg text-text-tertiary-dark font-firaSans text-center max-w-md tracking-wider px-4'>
                 I&#39;m working on something amazing. <br/> Please check back soon !
             </p>
         </section>

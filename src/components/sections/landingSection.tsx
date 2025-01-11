@@ -11,7 +11,12 @@ export default function LandingSection() {
     const roles = [
         'Software Engineer',
         'Full Stack Engineer',
-        'Machine Learning Engineer'
+        'Full Stack Developer',
+        'Machine Learning Engineer',
+        'Computer Vision Engineer',
+        'Computer Vision Researcher',
+        'Software Developer',
+        'Web Developer',
     ];
 
     useEffect(() => {
@@ -27,7 +32,7 @@ export default function LandingSection() {
     return (
         <section id='home' className='w-full min-h-screen relative isolate overflow-hidden'>
             {/* Noise Filter Container */}
-            <div className='absolute inset-0 overflow-hidden'>
+            <div className='absolute inset-0 w-full h-full overflow-hidden'>
                 <svg className='absolute inset-0 h-full w-full'>
                     <defs>
                         <filter id='noise'>
@@ -48,18 +53,18 @@ export default function LandingSection() {
 
             {/* Content */}
             <div className='relative min-h-screen flex items-center justify-center font-firaSans'>
-                <div className='w-full max-w-[85rem] mx-auto px-6 md:px-10'>
+                <div className='w-full max-w-[85rem] mx-auto px-6 sm:px-8 md:px-10'>
                     <div className={`transition-all duration-1000 ease-out ${
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}>
-                        <div className='space-y-5 text-left'>
+                        <div className='space-y-3 text-left'>
                             {/* Greeting */}
-                            <div className='text-2xl text-text-tertiary-dark'>
+                            <div className='text-xl sm:text-2xl text-text-tertiary-dark'>
                                 Hey there 👋
                             </div>
 
                             {/* Name */}
-                            <h1 className='text-5xl font-normal'>
+                            <h1 className='text-[32px] sm:text-4xl lg:text-5xl font-normal'>
                                 <span className='text-text-tertiary-dark'>I&#39;m {' '}</span>
                                 <span className='ml-2 text-text-primary-dark tracking-tight font-poppins'>
                                     Sai Harshavardhan Reddy Kona
@@ -68,23 +73,23 @@ export default function LandingSection() {
 
                             {/* Role */}
                             <div className='h-16 relative'>
-                                <p className='text-4xl font-medium absolute transition-all duration-500 ease-in-out'>
+                                <p className='text-3xl sm:text-3xl md:text-4xl font-medium absolute transition-all duration-500 ease-in-out'>
                                     <span className='text-text-secondary-dark'>A {' '}</span>
-                                    <span className='text-teal-hover-dark ml-2 font-firaCode tracking-wide'>
+                                    <span className='text-teal-hover-dark ml-2 font-firaCode tracking-widest'>
                                         {roles[roleIndex]}
                                     </span>
                                 </p>
                             </div>
 
                             {/* Description */}
-                            <p className='text-xl md:text-2xl text-text-secondary-dark font-light leading-relaxed max-w-3xl text-justify'>
+                            <p className='text-xl sm:text-xl md:text-2xl text-text-secondary-dark font-light leading-relaxed max-w-3xl text-justify'>
                                 A passionate builder who transforms ideas into scalable solutions and occasionally gets lost in
                                 optimization rabbit holes. But hey, that&#39;s just part of the engineering adventure! 🚀
                             </p>
                         </div>
 
                         {/* Social Links */}
-                        <div className='absolute right-0 flex flex-col items-center space-y-4'>
+                        <div className='absolute right-0 flex flex-col items-center space-y-4 pt-6'>
                             <div className='w-[3px] h-16 bg-border-dark mb-3'></div>
                             <a
                                 href='https://linkedin.com/in/harshavardhankona'

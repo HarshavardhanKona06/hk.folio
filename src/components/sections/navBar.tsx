@@ -22,7 +22,7 @@ export default function NavBar() {
         <div className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200
             ${isScrolled ? 'backdrop-blur-md bg-bg-tertiary-dark/40' : 'bg-transparent'}
         `}>
-            <nav className='max-w-[85rem] mx-auto pt-3 pb-1 flex justify-between items-start'>
+            <nav className='max-w-[90rem] mx-auto px-6 sm:px-6 lg:px-8 pt-5 lg:pt-3 pb-1 flex justify-between items-start'>
 
                 <div className='pt-1'>
                     <PageLogo />

@@ -289,7 +289,7 @@ export default function NavItems() {
 
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 834);
         };
         checkMobile();
         window.addEventListener('resize', checkMobile);
